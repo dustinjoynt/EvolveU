@@ -1,0 +1,58 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	/*background-image: url(https://images.unsplash.com/photo-1549598685-0058b114c9d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1764&q=80);
+	/*opacity: .5*/
+}
+
+h1 {
+	font-family: 'Anton', sans-serif;
+	color: rgba(18, 46, 81, 1);
+	letter-spacing: 1px;
+	/*padding-top: 10px;*/
+}
+/*button {
+	background-color: white;
+	color: black;
+	border: 2px solid rgba(79, 108, 142, 1);
+  	
+
+  	-webkit-transition-duration: 0.4s; 
+  	transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgba(79, 108, 142, 1);
+  color: white;
+}*/
+
+button {
+  background-color: rgba(79, 108, 142, 1);
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  font-size: 12px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {opacity: 1}
+
+div {
+	background-color: rgba(255, 255, 255, 1) ;
+	width: 450px;
+	border: solid;
+	border-color: black;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: -5px;
+
+}
+
+/*input{
+	padding-bottom: 20px
+}*/

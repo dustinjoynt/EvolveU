@@ -1,0 +1,106 @@
+<!-- 
+Define attirbutes/variabels
+-->	
+
+<script type="text/javascript">
+	var a = 3; //number
+	var b = "String"; //string
+	var c = false; //boolean
+	console.log(a, b, c);
+
+	var array = ["1","2","3"]; //array
+	console.log (array)
+	 
+	var object = {name:"Dustin", dob:"02/22/2018", location:"Calgary" //object
+	};
+	console.log (object)
+
+	var d = undefined; //undefined
+	console.log (d);
+
+
+//Sample If/Else
+
+	// var f = prompt("Enter a number:");
+
+	var f = 5;
+
+	if(f>5){
+		console.log("A is big")
+	}
+	else if(f=5){
+		console.log("A is normal")
+	}
+	else{
+		console.log("A is small")
+	}
+
+//Functions
+	
+	function multiply (a, f){
+		return a*f;
+	}
+		console.log(multiply(a, f));
+
+//arrays
+
+	array.unshift("lemon"); //add to the front
+	console.log(array); 
+	array.push("lime"); //add to the end
+	console.log(array);
+	array[1] = "orange"; //update values
+	console.log(array);
+
+//loops
+
+//for
+
+for(var i = 0; i < 10; i++){
+	console.log(i);
+}
+
+//for/in
+
+var text = "";
+//var x;
+
+for(var x in object) {
+	text += object[x] + " ";
+	}
+	console.log(text);
+
+//while
+var y = 2
+while(y < 7){
+	console.log(y++);
+}
+
+//do while
+var z = 6;
+do {
+	 z++;
+	 console.log(z);
+}
+while  (z < 10);
+
+//for each
+
+array.forEach(function(x, i) {
+	console.log(x, i) 
+});
+
+//objects/dictionaries
+
+//lookup key to retreive value
+
+console.log(Object.keys(object)); //retrieves keys
+
+console.log(Object.values(object)); //retreives values
+
+</script>
+
+
+
+
+
+

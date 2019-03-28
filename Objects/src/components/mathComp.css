@@ -1,0 +1,60 @@
+.MathComp{
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.inputMath{
+  width: 200px;
+  color: #282c34;
+  border: none;
+  /*border-left: solid #00C9A7 10px;*/
+  border-radius: 25px;
+  height: 30px;
+  margin: 2px;
+  text-align: center;
+  font-size:18px;
+ 
+}
+
+#equals{
+  font-size: 30px;
+  margin-top: -1px;
+  margin-bottom: 5px;
+ /*  height: 50px;*/
+
+}
+
+#mathResult{
+  color: #282c34;
+  border: none;
+  /*border-left: solid #FF9671 10px;*/
+  border-radius: 25px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  font-size:30px;
+  
+}
+
+.mathButton{
+  height: 40px;
+  width: 50px;
+  border: solid white 2px;
+  border-radius: 5px;
+  color: white;
+  background-color: #282c34;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  transition: all .2s ease-in-out;
+}
+
+.mathButton:hover{
+  transform: scale(1.1);
+}
