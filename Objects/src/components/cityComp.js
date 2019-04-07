@@ -1,6 +1,6 @@
 import React from 'react'
 
-class City extends React.Component{
+class CityComp extends React.Component{
 	render(){
 		return(
 			<div className='Comp'>
@@ -11,4 +11,4 @@ class City extends React.Component{
 }
 
 
-export default City
+export default CityComp

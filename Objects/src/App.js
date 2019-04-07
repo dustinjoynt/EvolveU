@@ -5,7 +5,7 @@ import Container from './components/container.js'
 import MathComp from './components/MathComp.js'
 import Home from './components/home.js'
 import AccountComp from './components/accountComp.js'
-import City from './components/city.js'
+import CityComp from './components/cityComp.js'
 
 class App extends Component {
   constructor(){
@@ -37,7 +37,7 @@ class App extends Component {
       newDiv = <AccountComp />
     }
         else if (this.clickResult === 'city'){
-      newDiv = <City />
+      newDiv = <CityComp />
     }
 
     return (
