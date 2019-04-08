@@ -77,7 +77,6 @@ class MathComp extends React.Component{
 
 		return(
 			<div className='Comp'>
-				<h2>Hello World From Math Comp</h2>
 				<div className='MathComp'>
 					<input className='inputMath' name='input1' type='text' placeholder='Input First Number' value={this.state.input1} onChange={this.inputChange}></input>
 					<input className='inputMath' name='input2' type='text' placeholder='Input Second Number' value={this.state.input2} onChange={this.inputChange}></input>

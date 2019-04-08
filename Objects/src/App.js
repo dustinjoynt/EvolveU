@@ -10,7 +10,7 @@ import CityComp from './components/cityComp.js'
 class App extends Component {
   constructor(){
     super()
-    this.clickResult = 'account'
+    this.clickResult = 'city'
     this.state = {
       myState: this.clickResult
     }
