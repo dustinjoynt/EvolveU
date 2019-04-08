@@ -33,7 +33,7 @@ class City{
 		if(this.population < 20000){
 			return('Town')
 		}
-		if(this.population < 10000){
+		if(this.population < 100000){
 			return('Large Town')
 		}
 		else{
