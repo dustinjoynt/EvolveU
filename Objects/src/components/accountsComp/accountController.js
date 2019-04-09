@@ -27,8 +27,8 @@ class Accounts{
 		this.minAccount = Math.min(...balanceArray)
 	}
 
-	depAccount (amount, index) {
-		this.acctArray[index].deposit(amount)
+	depAccount (amount, key) {
+		this.acctArray[key].deposit(amount)
 	}
 }
 

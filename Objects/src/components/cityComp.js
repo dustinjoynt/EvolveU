@@ -30,6 +30,16 @@ class CityComp extends React.Component{
 			})
 		}
 		if(event.target.id === 'addCity'){
+			if(this.state.cityName.length === 0){
+				return(alert('Please enter valid name'))
+			}
+			if(this.state.cityLat < -90 || this.state.cityLat > 90 || this.state.cityLat.length === 0){
+				return(alert('Please input a valid latitude. Latittude must be between -90° and 90°.'))
+			}
+			if(this.state.cityLon < -180 || this.state.cityLon > 180 || this.state.cityLon.length === 0){
+				return(alert('Please input a valid longitude. Longitude must be between -180° and 180°.'))
+			}
+			else{
 			const tempCommunity = this.state.community
 			const tempCity = new City(
 				this.state.cityName, 
@@ -45,7 +55,7 @@ class CityComp extends React.Component{
 				cityLat: '',
 				cityLon: '',
 				cityPop: '',
-			})
+			})}
 		}
 		if(event.target.name === 'editCity'){
 			this.setState({
