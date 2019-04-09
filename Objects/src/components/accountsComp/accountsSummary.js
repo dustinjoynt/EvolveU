@@ -1,5 +1,5 @@
 import React from 'react'
-import './../acctComp.css'
+import './acctComp.css'
 
 class AccountsSummary extends React.Component{
 	render(props){

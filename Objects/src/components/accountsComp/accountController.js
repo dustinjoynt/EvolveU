@@ -26,6 +26,10 @@ class Accounts{
 		const balanceArray = this.acctArray.map(a => a.intBalance)
 		this.minAccount = Math.min(...balanceArray)
 	}
+
+	depAccount (amount, index) {
+		this.acctArray[index].deposit(amount)
+	}
 }
 
 export default Accounts

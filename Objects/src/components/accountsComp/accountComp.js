@@ -1,9 +1,9 @@
 import React from 'react'
-import Account from './accountsComp/account.js'
+import Account from './account.js'
 import AddAccounts from './accountsComp/addAccounts.js'
 import AccountsSummary from './accountsComp/accountsSummary'
-import Accounts from './accountsComp/accountController.js'
-import './accountsComp/acctComp.css'
+import Accounts from './accountController.js'
+import './acctComp.css'
 
 class AccountComp extends React.Component{
 	constructor(props){

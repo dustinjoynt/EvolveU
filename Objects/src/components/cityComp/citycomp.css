@@ -1,0 +1,78 @@
+.cityBody {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: black;
+   opacity: 0.5;
+   cursor: pointer;
+
+   filter: blur(10px);
+   -webkit-filter: blur(10px);
+   -moz-filter: blur(10px);
+   -o-filter: blur(10px);
+   -ms-filter: blur(10px);
+   /* filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask"); */
+}
+
+.createForm{
+	background: white;
+	height: 270px;
+	width: 400px;
+	position: absolute;
+	top: calc(50vh - (/* height */270px / 2));
+	left: calc(50vw - (/* width */400px / 2));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 5px 5px 10px;
+	border: solid black 1px;
+	border-radius: 3px;
+}
+
+.editBody {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: black;
+   opacity: 0.5;
+   cursor: pointer;
+
+   filter: blur(10px);
+   -webkit-filter: blur(10px);
+   -moz-filter: blur(10px);
+   -o-filter: blur(10px);
+   -ms-filter: blur(10px);
+   /* filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask"); */
+}
+
+.editForm{
+	background: white;
+	height: 270px;
+	width: 400px;
+	position: absolute;
+	top: calc(50vh - (/* height */270px / 2));
+	left: calc(50vw - (/* width */400px / 2));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 5px 5px 10px;
+	border: solid black 1px;
+	border-radius: 3px;
+}
+
+.citySummary{
+	display:flex;
+	flex-direction: row-reverse;
+	align-items: top;
+	justify-content: center;
+}
+
+.indCity{
+	border: solid white 2px;
+}

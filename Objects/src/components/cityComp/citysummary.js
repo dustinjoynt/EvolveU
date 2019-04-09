@@ -5,7 +5,7 @@ class CitySummary extends React.Component {
 
 //Map array of cities into div container to show city, classification, and hemisphere
 		const citySummary = this.props.community.arrCommunity.map((city, index) => 
-			<div key={city.name+'-'+index}>
+			<div key={city.name+'-'+index} className='indCity'>
 				<div>
 					<p>{this.props.community.arrCommunity[index].show()}</p>
 					<p>Settlement Type: {this.props.community.arrCommunity[index].howBig()}</p>
@@ -28,8 +28,8 @@ class CitySummary extends React.Component {
 		const totalPop = this.props.community.totalPopulation
 
 		return(
-			<div>
-				<div>
+			<div className='citySummary'>
+				<div >
 					{citySummary}
 				</div>
 				<div>
