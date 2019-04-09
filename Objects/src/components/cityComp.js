@@ -4,7 +4,7 @@ import Community from './cityComp/community.js'
 import City from './cityComp/city.js'
 import CitySummary from './cityComp/citysummary.js'
 import EditCity from './cityComp/editcity.js'
-import cityStyle from './cityComp/citycomp.css'
+import './cityComp/citycomp.css'
 
 class CityComp extends React.Component{
 	constructor(props){

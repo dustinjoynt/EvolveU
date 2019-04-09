@@ -1,6 +1,6 @@
 import React from 'react'
-import MathFuncs from './math.js'
-import './mathComp.css'
+import MathFuncs from './mathComp/math.js'
+import './mathComp/mathComp.css'
 
 
 class MathComp extends React.Component{
