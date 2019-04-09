@@ -5,12 +5,14 @@ class EditCity extends React.Component {
 	render(){
 		return(
 			<div>
-				<div className='editBody'>
+				<div className='cityBody' onClick={this.props.handleClick} id='mask'>
 				</div>
-				<div className='editForm'>
-					<input id='editAmount' placeholder='Amount' onChange={this.props.handleChange} type='number'></input>				
-					<button id='addPop' onClick={this.props.handleClick}>Moved In</button>
-					<button id='subPop' onClick={this.props.handleClick}>Moved Out</button>
+				<div className='cityForm'>
+					<input className='cityInput' id='editAmount' placeholder='Amount' onChange={this.props.handleChange} type='number'></input>
+					<div className='popupBtn'>				
+						<button className='cityButton' id='addPop' onClick={this.props.handleClick}>Moved In</button>
+						<button className='cityButton' id='subPop' onClick={this.props.handleClick}>Moved Out</button>
+					</div>
 				</div>
 			</div>
 			)

@@ -66,7 +66,14 @@ class CityComp extends React.Component{
 				renderEditCity: false,
 				editAmt: 0
 			})
-		}		
+		}
+		if(event.target.id === 'mask'){
+			this.setState({
+				renderEditCity: false,
+				renderCreateCity: false
+			})
+		}
+
 	}
 
 //On change function to update all input feilds into state
@@ -102,7 +109,7 @@ class CityComp extends React.Component{
 	render() {
 		return(
 			<div className='Comp'>
-			<button id='createCity' onClick={this.handleClick}>Create City</button>
+			<button id='createCity' className='cityButton' onClick={this.handleClick}>Create City</button>
 			{this.state.renderCreateCity === true &&
 				<CreateCity 
 					handleChange = {this.handleChange}

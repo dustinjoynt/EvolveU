@@ -7,10 +7,10 @@ class CitySummary extends React.Component {
 		const citySummary = this.props.community.arrCommunity.map((city, index) => 
 			<div key={city.name+'-'+index} className='indCity'>
 				<div>
-					<p>{this.props.community.arrCommunity[index].show()}</p>
-					<p>Settlement Type: {this.props.community.arrCommunity[index].howBig()}</p>
-					<p>Hempishere: {this.props.community.whichSphere(index)}</p>
-					<button name='editCity' id={index} onClick={this.props.handleClick}>Edit Population</button>
+					<p className='cityP'>{this.props.community.arrCommunity[index].show()}</p>
+					<p className='cityP'>Settlement Type: {this.props.community.arrCommunity[index].howBig()}</p>
+					<p className='cityP'>Hempishere: {this.props.community.whichSphere(index)}</p>
+					<button name='editCity' className='cityButton' id={index} onClick={this.props.handleClick}>Edit Population</button>
 				</div>
 			</div>
 		)
@@ -32,10 +32,10 @@ class CitySummary extends React.Component {
 				<div >
 					{citySummary}
 				</div>
-				<div>
-					<p>Most Northern City: {mostNorth.name}</p>
-					<p>Most Southern City: {mostSouth.name}</p>
-					<p>Total Population: {totalPop}</p>
+				<div className='indCity'>
+					<p className='cityP'>Most Northern City: {mostNorth.name}</p>
+					<p className='cityP'>Most Southern City: {mostSouth.name}</p>
+					<p className='cityP'>Total Population: {totalPop}</p>
 				</div>
 			</div>
 			)
