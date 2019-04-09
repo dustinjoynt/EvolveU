@@ -8,7 +8,7 @@ class City{
 
 	show () {
 		return(
-		`${this.name} ${this.latitude} ${this.longitude} ${this.population}`
+		`${this.name} ${this.latitude}° ${this.longitude}° POP: ${this.population}`
 		)
 	}
 

@@ -24,7 +24,7 @@ class Community{
 	} 
 
 	getPopulation () {
-		this.totalPopulation = this.arrCommunity.reduce((prev, current) => prev.population + current.population)
+		this.totalPopulation = this.arrCommunity.reduce((accum, current) => accum + current.population, 0)
 	}
 
 }

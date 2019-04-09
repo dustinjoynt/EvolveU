@@ -3,20 +3,25 @@ import CreateCity from './cityComp/createcity.js'
 import Community from './cityComp/community.js'
 import City from './cityComp/city.js'
 import CitySummary from './cityComp/citysummary.js'
+import EditCity from './cityComp/editcity.js'
 
 class CityComp extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
 			renderCreateCity: false,
+			renderEditCity: false,
 			cityName: '',
 			cityLat: '',
 			cityLon: '',
-			cityPop: '',
-			community: new Community()
+			cityPop: 0,
+			community: new Community(),
+			editPop: '',
+			editAmt: 0
 		}
 	}
 
+//On click function for all click functionality
 	handleClick = (event) => {
 		if(event.target.id === 'createCity'){
 			this.setState({
@@ -29,7 +34,8 @@ class CityComp extends React.Component{
 				this.state.cityName, 
 				this.state.cityLat, 
 				this.state.cityLon, 
-				this.state.cityPop)
+				this.state.cityPop
+				)
 			tempCommunity.addCity(tempCity)
 			this.setState({
 				community: tempCommunity,
@@ -39,9 +45,30 @@ class CityComp extends React.Component{
 				cityLon: '',
 				cityPop: '',
 			})
+		}
+		if(event.target.name === 'editCity'){
+			this.setState({
+				renderEditCity: true,
+				editPop: event.target.id
+			})
+		}
+		if(event.target.id === 'addPop'){
+			this.state.community.arrCommunity[this.state.editPop].movedIn(this.state.editAmt)
+			this.setState({
+				renderEditCity: false,
+				editAmt: 0
+			})
+		}	
+		if(event.target.id === 'subPop'){
+			this.state.community.arrCommunity[this.state.editPop].movedOut(this.state.editAmt)
+			this.setState({
+				renderEditCity: false,
+				editAmt: 0
+			})
 		}		
 	}
 
+//On change function to update all input feilds into state
 	handleChange = (event) => {
 		if(event.target.id === 'cityName'){
 			this.setState({
@@ -60,7 +87,12 @@ class CityComp extends React.Component{
 		}
 		if(event.target.id === 'cityPop'){
 			this.setState({
-				cityPop: event.target.value
+				cityPop: Number(event.target.value)
+			})
+		}
+		if(event.target.id === 'editAmount'){
+			this.setState({
+				editAmt: Number(event.target.value)
 			})
 		}
 	}
@@ -76,12 +108,17 @@ class CityComp extends React.Component{
 					handleClick = {this.handleClick}
 				/>
 			}
-			{this.state.community.arrCommunity.length > 0 &&
-				<div>
-				<CitySummary
-					community ={this.state.community}
+			{this.state.renderEditCity === true &&
+				<EditCity
+					handleChange = {this.handleChange}
+					handleClick = {this.handleClick}
 				 />
-				</div>
+			}
+			{this.state.community.arrCommunity.length > 0 &&
+					<CitySummary
+						community ={this.state.community}
+						handleClick = {this.handleClick}
+					 />
 			}
 			</div>
 		)
