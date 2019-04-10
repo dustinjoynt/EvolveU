@@ -83,7 +83,6 @@ class CityComp extends React.Component{
 				renderCreateCity: false
 			})
 		}
-
 	}
 
 //On change function to update all input feilds into state
@@ -114,7 +113,6 @@ class CityComp extends React.Component{
 			})
 		}
 	}
-
 
 	render() {
 		return(
