@@ -6,7 +6,9 @@ class Node{
 	}
 
 	show () {
+		return(
 		`${this.subject} ${this.amount}`
+		)
 	}
 }
 

@@ -8,7 +8,7 @@ test('works', () =>{
 	expect(obj.longitude).toBe(-114)
 	expect(obj.population).toBe(10000)
 	//test show 
-	expect(obj.show()).toBe('Calgary 51 -114 10000')
+	expect(obj.show()).toBe('Calgary 51° -114° POP: 10000')
 	//test moved in
 	expect(obj.movedIn(100)).toBe(10100)
 	//test moved out

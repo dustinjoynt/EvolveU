@@ -2,7 +2,8 @@ import Node from './node.js'
 
 test('works', () =>{
 	//test constructor
-	let node = new Node('baseball', 25)
+	const node = new Node('baseball', 25)
+	console.log(node)
 	expect(node.subject).toBe('baseball')
 	expect(node.forwardNode).toBe(null)
 })
