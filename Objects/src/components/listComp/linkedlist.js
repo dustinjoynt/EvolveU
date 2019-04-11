@@ -27,7 +27,7 @@ class LinkedList{
 	getLast () {
 		let node = this.head
 		while (node) {
-			if( node.forwardNode === null){
+			if(node.forwardNode === null){
 				return this.currentNode = node
 			}
 			node = node.forwardNode
@@ -78,6 +78,16 @@ class LinkedList{
 			this.currentNode = newNode
 			return newNode
 		}
+	}
+
+	deleteNode () {
+		let previousNode = this.getPrevious()
+		// let currentNode = this.currentNode
+		// console.log('INSIDE', this.currentNode.forwardNode)
+		console.log('INSIDE PREV', previousNode)
+		previousNode.forwardNode = this.currentNode.forwardNode
+		this.currentNode = previousNode
+		return this.currentNode
 	}
 
 }

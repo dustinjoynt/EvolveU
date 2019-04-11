@@ -39,13 +39,22 @@ test('works', () => {
 	linkedList.insertNode('louis', 30)
 	console.log(linkedList)
 
-	console.log('current', linkedList.currentNode)
-	linkedList.getFirst()
-	console.log(linkedList.currentNode)
+	// console.log('current', linkedList.currentNode)
+	// linkedList.getFirst()
+	// linkedList.getNext()
+	// console.log(linkedList.currentNode)
+	// linkedList.getFirst()
+	// linkedList.insertNode('window', 55)
 	linkedList.getLast()
-	console.log(linkedList.currentNode)
+	console.log('LAST', linkedList)
 
-	console.log('SHOW', linkedList.currentNode.show())
+	// console.log('SHOW', linkedList.currentNode.show())
+
+	// linkedList.deleteNode()
+
+	// console.log(linkedList)
+
+	// console.log(currentNode)
 
 
 
