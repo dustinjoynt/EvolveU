@@ -1,9 +1,11 @@
 import Node from './node.js'
 
 test('works', () =>{
-	//test constructor
+	
 	const node = new Node('baseball', 25)
-	console.log(node)
+	
+	//test constructor
 	expect(node.subject).toBe('baseball')
 	expect(node.forwardNode).toBe(null)
+	expect(node.show()).toBe('baseball 25')
 })

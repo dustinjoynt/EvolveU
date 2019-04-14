@@ -3,62 +3,55 @@ import LinkedList from './linkedlist'
 const linkedList = new LinkedList()
 
 test('works', () => {
-	// console.log(linkedList)
-	// linkedList.insertAtBeginning('baseball', 25)
-	// console.log(linkedList)
-	// linkedList.insertAtBeginning('hockey', 30)
-	// console.log(linkedList)
-	// linkedList.insertAtBeginning('soccer', 30)
-	// console.log(linkedList)
-	// linkedList.insertAtBeginning('tennis', 30)
-	// console.log(linkedList)
 
-	// // console.log(linkedList.getAt(0))
-
-	// console.log('first', linkedList.getFirst())
-	// // console.log(linkedList.currentNode)
-
-	// // console.log('last', linkedList.getLast())
-
-	// // // console.log(linkedList.currentNode)
-
-	// console.log('next', linkedList.getNext())
-
-	// // // console.log(linkedList.head.forwardNode.forwardNode)
-
-	// // console.log('current', linkedList.currentNode)
-
-	// console.log('previous', linkedList.getPrevious())
-
-	linkedList.insertNode('tim', 23)
-	console.log(linkedList)
-	linkedList.insertNode('jo', 27)
-	console.log(linkedList)
-	linkedList.insertNode('fred', 27)
-	console.log(linkedList)
-	linkedList.insertNode('louis', 30)
+	//test insertion of first node, position of currentNode and node pointer
+	linkedList.insertNode('baseball', 50)
+	expect(linkedList.head.subject).toBe('baseball')
+	expect(linkedList.currentNode.subject).toBe('baseball')
+	expect(linkedList.head.forwardNode).toBe(null)
 	console.log(linkedList)
 
-	// console.log('current', linkedList.currentNode)
-	// linkedList.getFirst()
-	// linkedList.getNext()
-	// console.log(linkedList.currentNode)
-	// linkedList.getFirst()
-	// linkedList.insertNode('window', 55)
+	//test insertion of second node and position of currentNode 
+	linkedList.insertNode('golf', 25)
+	expect(linkedList.head.forwardNode.subject).toBe('golf')
+	expect(linkedList.currentNode.subject).toBe('golf')
+	console.log(linkedList)
+
+	//test insertion of third node and position of currentNode
+	linkedList.insertNode('tennis', 65)
+	console.log('3', linkedList)
+	expect(linkedList.head.forwardNode.forwardNode.subject).toBe('tennis')
+	expect(linkedList.currentNode.subject).toBe('tennis')
+
+	//test getFirst method
+	linkedList.getFirst()
+	expect(linkedList.currentNode.subject).toBe('baseball')
+
+	//test getNext method
+	linkedList.getNext()
+	expect(linkedList.currentNode.subject).toBe('golf')
+
+	//test getLast method
 	linkedList.getLast()
-	console.log('LAST', linkedList)
+	expect(linkedList.currentNode.subject).toBe('tennis')
 
-	// console.log('SHOW', linkedList.currentNode.show())
+	//test getPrevious method
+	linkedList.getPrevious()
+	expect(linkedList.currentNode.subject).toBe('golf')
 
-	// linkedList.deleteNode()
+	//test deleteNode
+	linkedList.deleteNode()
+	expect(linkedList.currentNode.subject).toBe('baseball')
+	console.log('afterDelete', linkedList)
 
-	// console.log(linkedList)
+	//test get previous on head
+	linkedList.getFirst()
+	linkedList.getPrevious()
+	expect(linkedList.currentNode.subject).toBe('baseball')
 
-	// console.log(currentNode)
-
-
-
-
-
+	//test get next on last node
+	linkedList.getLast()
+	linkedList.getNext()
+	expect(linkedList.currentNode.subject).toBe('tennis')
 
 })

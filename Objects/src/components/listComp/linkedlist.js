@@ -6,19 +6,6 @@ class LinkedList{
 		this.currentNode = null
 	}
 
-	// getAt (index) {
-	// 	let counter = 0
-	// 	let node = this.head
-	// 	while (node) {
-	// 		if( counter === index) {
-	// 			return node
-	// 		}
-	// 		counter ++
-	// 		node = node.forwardNode
-	// 	}
-	// 	return null
-	// }
-
 	getFirst () {
 		let node = this.head
 		return this.currentNode = node
@@ -34,9 +21,16 @@ class LinkedList{
 		}
 	}
 
-	getNext () {
-		let node = this.currentNode
-		return this.currentNode = node.forwardNode
+	// getNext () {
+	// 	let node = this.currentNode
+	// 	return this.currentNode = node.forwardNode
+	// }
+
+		getNext () {
+		if(this.currentNode.forwardNode === null){
+			return this.currentNode
+		}
+		return this.currentNode = this.currentNode.forwardNode
 	}
 
 	getPrevious () {
@@ -46,20 +40,12 @@ class LinkedList{
 		}
 		while (node) {
 			if (this.currentNode === node.forwardNode){
-				node = this.currentNode
-				return node
+				node
+				return this.currentNode = node
 			}
 			node = node.forwardNode
 		}
 	}
-
-	// 	insertAtBeginning (subject, amount) {
-	// 	let newNode = new Node(subject, amount)
-	// 	newNode.forwardNode = this.head
-	// 	this.head = newNode
-	// 	this.currentNode = newNode
-	// 	return this.head
-	// }
 
 	insertNode (subject, amount) {
 		if(this.head === null){
@@ -71,10 +57,8 @@ class LinkedList{
 		}
 		else{
 			let newNode = new Node(subject, amount)
-			let previousNode = this.getPrevious()
-			console.log('INSIDE', previousNode)
-			newNode.forwardNode = previousNode.forwardNode
-			previousNode.forwardNode = newNode
+			newNode.forwardNode = this.currentNode.forwardNode
+			this.currentNode.forwardNode = newNode
 			this.currentNode = newNode
 			return newNode
 		}
@@ -82,15 +66,11 @@ class LinkedList{
 
 	deleteNode () {
 		let previousNode = this.getPrevious()
-		// let currentNode = this.currentNode
-		// console.log('INSIDE', this.currentNode.forwardNode)
-		console.log('INSIDE PREV', previousNode)
 		previousNode.forwardNode = this.currentNode.forwardNode
 		this.currentNode = previousNode
 		return this.currentNode
 	}
 
 }
-
 
 export default LinkedList	
