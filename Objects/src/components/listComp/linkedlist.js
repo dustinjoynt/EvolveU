@@ -67,11 +67,15 @@ class LinkedList{
 		if(this.head.forwardNode === null){
 			return this.head = null
 		}
+		if(this.head === this.currentNode){
+			this.head = this.head.forwardNode
+			return this.currentNode = this.head
+		}
 		else{
-		let previousNode = this.getPrevious()
-		previousNode.forwardNode = this.currentNode.forwardNode.forwardNode
-		this.currentNode = previousNode
-		return this.currentNode
+			let previousNode = this.getPrevious()
+			previousNode.forwardNode = this.currentNode.forwardNode.forwardNode
+			this.currentNode = previousNode
+			return this.currentNode
 	}
 	}
 
