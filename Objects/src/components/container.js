@@ -4,6 +4,7 @@ import home from './icons/home.png'
 import math from './icons/math.png'
 import account from './icons/account.png'
 import city from './icons/city.png'
+import link from './icons/link.png'
 
 
 class Container extends React.Component {
@@ -16,6 +17,7 @@ class Container extends React.Component {
             <img onClick = {this.props.clickFunc} src={math} className='Logos' alt='math'/>
             <img onClick = {this.props.clickFunc} src={account} className='Logos' alt='account'/>
             <img onClick = {this.props.clickFunc} src={city} className='Logos' alt='city'/>
+            <img onClick = {this.props.clickFunc} src={link} className='Logos' alt='link'/>
           </div>
       </div>
     )

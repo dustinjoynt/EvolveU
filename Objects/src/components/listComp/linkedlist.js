@@ -40,7 +40,6 @@ class LinkedList{
 		}
 		while (node) {
 			if (this.currentNode === node.forwardNode){
-				node
 				return this.currentNode = node
 			}
 			node = node.forwardNode
@@ -65,10 +64,15 @@ class LinkedList{
 	}
 
 	deleteNode () {
+		if(this.head.forwardNode === null){
+			return this.head = null
+		}
+		else{
 		let previousNode = this.getPrevious()
-		previousNode.forwardNode = this.currentNode.forwardNode
+		previousNode.forwardNode = this.currentNode.forwardNode.forwardNode
 		this.currentNode = previousNode
 		return this.currentNode
+	}
 	}
 
 }

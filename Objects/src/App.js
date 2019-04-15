@@ -6,11 +6,12 @@ import MathComp from './components/MathComp.js'
 import Home from './components/home.js'
 import AccountComp from './components/accountComp.js'
 import CityComp from './components/cityComp.js'
+import ListComp from './components/listComp.js'
 
 class App extends Component {
   constructor(){
     super()
-    this.clickResult = 'city'
+    this.clickResult = 'link'
     this.state = {
       myState: this.clickResult
     }
@@ -36,9 +37,11 @@ class App extends Component {
     else if (this.clickResult === 'account'){
       newDiv = <AccountComp />
     }
-        else if (this.clickResult === 'city'){
+    else if (this.clickResult === 'city'){
       newDiv = <CityComp />
     }
+    else if(this.clickResult === 'link')
+      newDiv = <ListComp />
 
     return (
 
