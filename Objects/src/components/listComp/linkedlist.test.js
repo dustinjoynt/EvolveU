@@ -1,5 +1,4 @@
 import LinkedList from './linkedlist'
-import Queue from './queue.js'
 
 const linkedList = new LinkedList()
 
@@ -54,13 +53,5 @@ test('works', () => {
 	linkedList.getLast()
 	linkedList.getNext()
 	expect(linkedList.currentNode.subject).toBe('tennis')
-
-})
-
-
-test('works', () => {
-	const queue = new Queue()
-
-	queue.push
 
 })
