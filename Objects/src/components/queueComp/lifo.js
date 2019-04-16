@@ -7,14 +7,13 @@ class Lifo extends React.Component{
 		// console.log('reverse',reverseQueue)
 		const lifoQueue = this.props.lifoQueue.queue.map((item, index) => 
 			<div className='fifo' key={item+'-'+index}>
-				<p>Item: {item}</p>
+				<p className='listP'>Item: {item}</p>
 			</div>
 			)
 
 		return(
 			<div>
 			{lifoQueue}
-			<h1>Hello World</h1>
 			</div>
 			)
 	}

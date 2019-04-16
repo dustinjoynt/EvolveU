@@ -3,6 +3,7 @@ import Queue from './queue'
 import Fifo from './fifo'
 import InputFieldFifo from './inputfieldfifo'
 import Lifo from './lifo'
+import './queuecomp.css'
 
 class QueueComp extends React.Component{
 	constructor(props){
@@ -85,35 +86,34 @@ class QueueComp extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<div>
-					<h1>FIFO</h1>
-					<button id='addFifo' onClick={this.handleClick}>Add To Queue</button>
-					<button id='removeFifo' onClick={this.handleClick}>Remove From Queue</button>
-					{this.state.fifoQueueRender === true &&
-						<InputFieldFifo
-							handleChange = {this.handleChange}
-							handleClick = {this.handleClick}
-						 />
-					}
-					{this.state.fifoQueue.queue.length > 0 && 
-						<Fifo 
-							fifoQueue = {this.state.fifoQueue}
-						/>
-					}
-				</div>
-				<div>
-					<h1>LIFO</h1>
-					<button id='addLifo' onClick={this.handleClick}>Add To Queue</button>
-					<button id='removeLifo' onClick={this.handleClick}>Remove From Queue</button>
-					{this.state.lifoQueueRender === true &&
-						<h1>Hello World</h1>
-					}
-					{this.state.lifoQueue.queue.length > 0 && 
-						<Lifo 
-							lifoQueue = {this.state.lifoQueue}
-						/>
-					}
+			<div className='Comp'>
+				<div className='queueComp'>
+					<div className='queueDiv'>
+						<h1 className='listP'>FIFO</h1>
+						<button className='cityButton' id='addFifo' onClick={this.handleClick}>Add To Queue</button>
+						<button className='cityButton' id='removeFifo' onClick={this.handleClick}>Remove</button>
+						{this.state.fifoQueueRender === true &&
+							<InputFieldFifo
+								handleChange = {this.handleChange}
+								handleClick = {this.handleClick}
+							 />
+						}
+						{this.state.fifoQueue.queue.length > 0 && 
+							<Fifo 
+								fifoQueue = {this.state.fifoQueue}
+							/>
+						}
+					</div>
+					<div className='queueDiv'>
+						<h1 className='listP'>LIFO</h1>
+						<button className='cityButton'id='addLifo' onClick={this.handleClick}>Add To Stack</button>
+						<button className='cityButton' id='removeLifo' onClick={this.handleClick}>Remove</button>
+						{this.state.lifoQueue.queue.length > 0 && 
+							<Lifo 
+								lifoQueue = {this.state.lifoQueue}
+							/>
+						}
+					</div>
 				</div>
 			</div>
 			)

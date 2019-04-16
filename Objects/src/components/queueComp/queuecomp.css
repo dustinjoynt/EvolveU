@@ -1,0 +1,32 @@
+.queueComp{
+	display: flex;
+  background-color: #282c34;
+  color: white;
+/*  min-height: 100vh;*/
+  display: flex-wrap;
+  justify-content: center;
+  text-align: center;
+/*  padding-top: 50px;*/
+}
+
+.queueDiv{
+	margin-right: 10px;
+	margin-left: 10px;
+	border: 1px solid rgba(21,171,195,1.0);
+	box-shadow: 0 0 10px rgba(21,171,195,0.5);
+	border-radius: 1em;
+	padding: 10px;
+	justify-content: center;
+/*	margin: 25px;*/
+}
+
+.fifo{
+/*	margin-right: 10px;
+	margin-left: 10px;*/
+	border: 1px solid rgba(21,171,195,1.0);
+	box-shadow: 0 0 10px rgba(21,171,195,0.5);
+	border-radius: 1em;
+	padding: 10px;
+	justify-content: center;
+	margin: 5px;
+}
