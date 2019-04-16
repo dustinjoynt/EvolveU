@@ -11,7 +11,7 @@ class Queue{
 		this.queue.shift()
 	}
 
-	lifo(){
+	lifo (){
 		this.queue.pop()
 	}
 	

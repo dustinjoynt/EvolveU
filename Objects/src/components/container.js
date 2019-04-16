@@ -5,6 +5,8 @@ import math from './icons/math.png'
 import account from './icons/account.png'
 import city from './icons/city.png'
 import link from './icons/link.png'
+import queue from './icons/queue.png'
+
 
 
 class Container extends React.Component {
@@ -18,6 +20,7 @@ class Container extends React.Component {
             <img onClick = {this.props.clickFunc} src={account} className='Logos' alt='account'/>
             <img onClick = {this.props.clickFunc} src={city} className='Logos' alt='city'/>
             <img onClick = {this.props.clickFunc} src={link} className='Logos' alt='link'/>
+            <img onClick = {this.props.clickFunc} src={queue} className='Logos' alt='queue'/>
           </div>
       </div>
     )

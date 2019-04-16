@@ -7,11 +7,12 @@ import Home from './components/home.js'
 import AccountComp from './components/accountComp.js'
 import CityComp from './components/cityComp.js'
 import ListComp from './components/listComp.js'
+import QueueComp from './components/queueComp/queueComp.js'
 
 class App extends Component {
   constructor(){
     super()
-    this.clickResult = 'link'
+    this.clickResult = 'queue'
     this.state = {
       myState: this.clickResult
     }
@@ -40,8 +41,13 @@ class App extends Component {
     else if (this.clickResult === 'city'){
       newDiv = <CityComp />
     }
-    else if(this.clickResult === 'link')
+    else if(this.clickResult === 'link'){
       newDiv = <ListComp />
+    }
+    else if(this.clickResult === 'queue'){
+      newDiv = <QueueComp />
+    }
+
 
     return (
 
