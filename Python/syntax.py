@@ -114,4 +114,3 @@ def taxes(income):
 		return round((income - 147667) * .29 + 30535, 2)
 	else:
 		return round((income - 210371) * .33 + 48719, 2)
-
